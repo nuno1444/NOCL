@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>김석희대학교</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet"  />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js"></script>
+   
+   <link href="http://vjs.zencdn.net/4.5/video-js.css" rel="stylesheet" />
+   <script src="http://vjs.zencdn.net/4.5/video.js"></script>
+    
+  <script type="text/javascript" >
+		$(document).ready(function() {
+			$("#pic_univ").data("flag","false");
+			
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+	</script>
+    
+    
+       
+    <style type="text/css">
+	#logo{
+		width:176px;
+		height:132px;
+		text-indent:-9999px;
+		background-image:url(images/CI_TITLE.png);
+		background-repeat:no-repeat;
+		margin-top:0px;
+		margin-right:auto;
+		margin-bottom:10px;
+		margin-left:auto;
+	}
+	.tile_sytle{
+		color:#3f3c30;
+		padding-top:10px;
+	}
+	.fotorama_caption{
+		text-align:center;
+	}
+		   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		.small {
+			width: 30%;
+		}
+		.large {
+			width: 100%;
+		}
+		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+		#video_canvas{
+			margin-top:0px;
+			margin-right:auto;
+			margin-bottom:0px;
+			margin-left:auto;
+			width:320px;
+			height:240px;
+		}
+		.content_style{
+			padding-right:0px;
+			padding-left:0px;
+		}
+	</style>
+</head>
+
+<body>
+	<div data-role="page" id="main">
+    	<div data-role="header">
+        	<h2 id="logo">김석희대학교</h2>
+        </div>
+       	<div data-role="content">
+        	 <uldata-role="listview" data-inset="true">
+            	<li><a href="#campus_images" >
+                	 <img src="images/pic_i.png" alt="" class="ui-li-thumb" />
+                    <h3 class="tile_style">캠퍼스이미지</h3>
+                </a></li>
+                <li><a href="#intro">
+                	<img src="images/intro_i.png" alt="" class="ui-li-thumb"/>
+                    <h3 class="tile_style">대학교소개</h3>
+                </a></li>
+                <li><a href="#video_value">
+               		<img src="images/movie_i.png" alt="" class="ui-li-thumb"/>
+                  	<h3 class="tile_style">홍보동영상</h3>
+                </a></li>
+                <li><a href="#">
+                	<img src="images/map_i.png" alt="" class="ui-li-thumb"/>
+                  <h3 class="tile_style">캠퍼스맵</h3>
+                </a></li>
+            </ul>
+        </div> <!----content ----->
+    </div> 
+    <!--- page---->
+    
+    <div data-role="page" id="campus_images" class="gallery-page">
+    	<div data-role="header">
+        	<a href="#main" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+            <h1>캠퍼스 이미지</h1>
+        </div> <!--campus header-->
+        <div data-role="content">
+        	<div class="fotorama" data-arrows="true" data-width="100%" data-ratio="965/643" data-allowfullscreen="true" data-nav="thumbs">
+            <a href="images/pic/full/cb01.jpg"><img src="images/pic/thumb/ca01.jpg" data-caption="호수공원"/></a>
+            <a href="images/pic/full/cb02.jpg"><img src="images/pic/thumb/ca02.jpg" data-caption="자유관"/></a>
+            <a href="images/pic/full/cb03.jpg"><img src="images/pic/thumb/ca03.jpg" data-caption="성실관"/></a>
+            <a href="images/pic/full/cb04.jpg"><img src="images/pic/thumb/ca04.jpg" data-caption="학생회관"/></a>
+            <a href="images/pic/full/cb05.jpg"><img src="images/pic/thumb/ca05.jpg" data-caption="자유관앞조형물"/></a>
+            <a href="images/pic/full/cb06.jpg"><img src="images/pic/thumb/ca06.jpg" data-caption="본관"/></a>
+            <a href="images/pic/full/cb07.jpg"><img src="images/pic/thumb/ca07.jpg" data-caption="채플관"/></a>
+        </div>
+    </div>
+    <div data-role="footer">
+    	<h2>김석희대학교</h2>
+    </div>
+    </div>
+    <!--대학교 소개-->
+    <div data-role="page" id="intro">
+    	<div data-role="header" data-theme="b">
+        	<a href="#main" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+            	<h1>대학교소개</h1>
+        </div>
+        <div data-role="content" data-theme="c">
+        	<img class="small" id="pic_univ" src="images/univ.jpg" alt="">
+            <h2>"<strong class="bold_style">시대정신</strong>을 선도하는 열린<strong class="bold_style">학문공동체</strong>입니다."</h2>
+        <div class="clear_both"></div>
+        <p>안녕하십니까? 김석희대학교에 관심을 가져주셔서 감사합니다. 김석희 대학교는 1세기의 역사를 지니며 그동안 많은 발전을 거듭했습니다.</p>
+        <p>여러분의 미래를 김석희대학교에서 함께하시길 희망합니다.</p>
+        <p>총장 김석희</p>
+        </div>
+        <div data-role="footer">
+        	<h2>김석희 대학교</h2>
+        </div>
+    </div>
+        
+    <div data-role="page" id="video_value" data-add-back-btn="true">
+    	<div data-role="header" data-theme="b">
+        	<a href="#main" data-icon="home" data-direction="reverse" class="ui-btn-left">Home</a>
+            	<h1>최고의 가치</h1>
+        </div>
+        <div data-role="content" data-theme="c" class="content_style">
+        	<div id="video_canvas">
+            	<div>
+                	<video class="video-js vjs-default-skin" width="320" height="240" controls preload="auto"
+                    data-setup="{}">
+                      <source src="http://210.125.242.16/hmaps/video/virtual_university.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                      <source src="http://210.125.242.16/hmaps/video/virtual_university.ogv" type='video/ogg; codecs="theora, vorbis"' />
+                      <source src="http://210.125.242.16/hmaps/video/virtual_university.webm" type='video/webm; codecs="vp8, vorbis"' />
+                    </video>
+                    </div>
+            </div>
+        </div>
+         <div data-role="footer">
+        	<h2>김석희 대학교</h2>
+        </div>
+    </div>
+</body>
+</html>
